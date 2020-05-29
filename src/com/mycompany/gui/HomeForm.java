@@ -8,7 +8,9 @@ package com.mycompany.gui;
 import com.codename1.components.ShareButton;
 import com.codename1.io.FileSystemStorage;
 import com.codename1.io.Log;
+import com.codename1.io.Util;
 import com.codename1.ui.Button;
+import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
@@ -34,8 +36,20 @@ public class HomeForm extends Form {
         setTitle("Home");
         setLayout(BoxLayout.y());
         
-        Button btnAddComment = new Button("Ajouter");
         
+   
+        
+        Button btnPDF = new Button("PDF");
+             btnPDF.addActionListener(e -> {
+                 
+    FileSystemStorage fs = FileSystemStorage.getInstance();
+    System.out.println(fs.getAppHomePath());
+    String fileName = "Liste_Produits.pdf";
+    if(!fs.exists(fileName)) {
+        Util.downloadUrlToFile("http://www.polyu.edu.hk/iaee/files/pdf-sample.pdf", fileName, true);
+    }
+    Display.getInstance().execute(fileName);
+});
         
         
         ListCategorieProduitForm listCat = new ListCategorieProduitForm(current);
@@ -70,7 +84,7 @@ public class HomeForm extends Form {
         
         
 
-        addAll(lbU, btnAddComment);
+        addAll(lbU, btnPDF);
         
 
     }

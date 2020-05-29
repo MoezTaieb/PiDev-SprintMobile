@@ -35,7 +35,7 @@ public class UserService {
     }
       
     public User current(){
-        return new User(2, "admin");
+        return new User(3, "user1");
     }
     
 }
