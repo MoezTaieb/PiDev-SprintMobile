@@ -1,0 +1,91 @@
+affectation_homepage:
+    path:     /
+    defaults: { _controller: AffectationBundle:Default:index }
+
+affectationCrud_read:
+    path:     /affectationLecture
+    defaults: { _controller: AffectationBundle:Affectation:read }
+
+affectationCrud_ajout:
+    path:     /affectationAjout
+    defaults: { _controller: AffectationBundle:Affectation:new }
+
+affectationCrud_modification:
+    path:     /affectationModification{id}
+    defaults: { _controller: AffectationBundle:Affectation:edit }
+
+affectationCrud_suppression:
+    path:     /affectationSuppression{id}
+    defaults: { _controller: AffectationBundle:Affectation:delete }
+
+affectationCrud_details:
+    path:     /affectationDetails{id}
+    defaults: { _controller: AffectationBundle:Affectation:show }
+
+demandeCrud_read:
+    path:     /demandeLecture
+    defaults: { _controller: AffectationBundle:Demande:read }
+
+demandeCrud_ajout:
+    path:     /demandeAjout
+    defaults: { _controller: AffectationBundle:Demande:new }
+
+demandeCrud_modification:
+    path:     /demandeModification{id}
+    defaults: { _controller: AffectationBundle:Demande:edit }
+
+demandeCrud_suppression:
+    path:     /demandeSuppression{id}
+    defaults: { _controller: AffectationBundle:Demande:delete }
+
+demandeCrud_details:
+    path:     /demandeDetails{id}
+    defaults: { _controller: AffectationBundle:Demande:show }
+
+donationCrud_donate:
+    path:     /donationArgent
+    defaults: { _controller: AffectationBundle:Donation:donate }
+
+donationCrud_sucess:
+    path:     /sucess
+    defaults: { _controller: AffectationBundle:Donation:sucess }
+
+donationCrud_echec:
+    path:     /echec
+    defaults: { _controller: AffectationBundle:Donation:echec }
+
+serviceAffectation_read:
+    path:     /serviceAffectationRead{tag}
+    defaults: { _controller: AffectationBundle:ServiceAffectation:read }
+
+serviceAffectation_new:
+    path:     /serviceAffectationNew
+    defaults: { _controller: AffectationBundle:ServiceAffectation:new }
+
+serviceAffectation_edit:
+    path:     /serviceAffectationEdit{id}
+    defaults: { _controller: AffectationBundle:ServiceAffectation:edit }
+
+serviceAffectation_delete:
+  path:     /serviceAffectationDelete{id}
+  defaults: { _controller: AffectationBundle:ServiceAffectation:delete }
+
+serviceDemande_read:
+    path:     /serviceDemandeRead{tag}
+    defaults: { _controller: AffectationBundle:ServiceDemande:read }
+
+serviceDemande_new:
+    path:     /serviceDemandeNew
+    defaults: { _controller: AffectationBundle:ServiceDemande:new }
+
+serviceDemande_edit:
+    path:     /serviceDemandeEdit{id}
+    defaults: { _controller: AffectationBundle:ServiceDemande:edit }
+
+serviceDemande_delete:
+    path:     /serviceDemandeDelete{id}
+    defaults: { _controller: AffectationBundle:ServiceDemande:delete }
+
+serviceArgent_new:
+  path:     /serviceArgentNew
+  defaults: { _controller: AffectationBundle:ServiceArgent:new }
